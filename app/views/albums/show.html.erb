@@ -10,5 +10,14 @@
   <%= @album.artist.name %>
 </p>
 
+<p>
+	<strong>Songs from this Album:</strong>
+	<ul>
+		<% @album.songs.each do |song| %>
+			<li><%= song.name %></li>
+		<% end %>
+	</ul>
+</p>
+
 <%= link_to 'Edit', edit_album_path(@album) %> |
 <%= link_to 'Back', albums_path %>
