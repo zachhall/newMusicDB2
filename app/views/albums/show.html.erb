@@ -11,6 +11,12 @@
 </p>
 
 <p>
+	<strong>Album Cover</strong>
+	<%= image_tag(@album.cover_url, width: 200) if @album.cover.present? %>
+
+</p>
+
+<p>
 	<strong>Songs from this Album:</strong>
 	<ul>
 		<% @album.songs.each do |song| %>
